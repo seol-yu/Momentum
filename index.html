@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Seolyu's Todo List📝</title>
+  </head>
+  <body>
+    <div id="seolyu__weather">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="seolyu">
+      <div class="seolyu__header">
+        <div id="seolyu__header--quote">
+          <image
+            class="seolyu__header--quote--photo"
+            src="./imgs/characters/cheerup.png"
+          ></image>
+          <div id="seolyu__header--quote--quote">
+            <span></span>
+            <br />
+            <span></span>
+          </div>
+        </div>
+        <div class="seolyu__header--center">
+          <form class="hidden" id="seolyu__header--loginForm">
+            <input
+              type="text"
+              maxlength="15"
+              placeholder="What is your name?"
+              required
+            />
+          </form>
+          <h1 class="hidden" id="seolyu__header--greeting"></h1>
+        </div>        
+        <div id="seolyu__header--time">
+          <div id="seolyu__header--time--calender">2022-02-01</div>
+          <div id="seolyu__header--time--clock">00:00:00</div>
+        </div>
+      </div>
+      <div class="seolyu__content">
+        <div class="seolyu__content--wall">
+          <div class="seolyu__content--wall--photo">
+            <div class="seolyu__content--wall--photo--deco"></div>
+            <div id="seolyu__content--wall--photo--image">
+            </div>
+            <span id="seolyu__content--wall-photo--author"><span>
+          </div>
+        </div>
+        <div class="seolyu__content--todo">
+          <span class="seolyu__content--todo--title">Things To Do 📝</span>
+          <form id="seolyu__content--todo--todoForm">
+            <input
+              type="text"
+              placeholder="Write a To Do and Press Enter"
+              required
+            />
+          </form>
+          <ul id="seolyu__content--todo--todoList">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/quotes.js"></script>
+    <script src="./js/greeting.js"></script>
+    <script src="js/time.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="js/todo.js"></script>
+     <script src="js/weather.js"></script>
+  </body>
+</html>

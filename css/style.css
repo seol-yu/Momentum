@@ -1,0 +1,259 @@
+:root {
+    /* Color */
+    --color-dark-pink: rgba(155, 62, 90);
+    --color-pink: rgba(206, 95, 147, 0.17);
+    --color-light-pink: rgba(206, 95, 147, 0.5);
+    --color-dark-red: rgba(96, 6, 6);
+    --color-white: #ffffff;
+
+    /* Font size */
+    --font-medium: 48px;
+    --font-regular: 36px;
+    --font-small: 32px;
+}
+
+@font-face {
+    font-family: 'SeoulHangangM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: 'SeoulHangangM';
+    background: rgb(154, 120, 154);
+    background: linear-gradient(160deg, rgba(154, 120, 154, 1) 0%, rgba(204, 173, 189, 1) 100%) no-repeat;
+}
+
+.hidden {
+    display: none;
+}
+
+.seolyu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 85%;
+    background-color: var(--color-pink);
+    border-radius: 20px;
+    padding: 1%;
+}
+
+.seolyu__header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 98%;
+    height: 25%;
+}
+
+#seolyu__header--quote {
+    display: flex;
+    align-items: center;
+    width: 27.6%;
+    background-color: rgba(155, 62, 90, .2);
+    border-radius: 20px;
+    padding: 1%;
+    color: var(--color-white);
+}
+
+.seolyu__header--quote--photo {
+    width: 150px;
+    height: 150px;
+    margin-right: 3%;
+}
+
+.seolyu__header--center {
+    width: 72.4%;
+    padding: 1%;
+    color: var(--color-white);
+    font-weight: 200;
+    padding-left: 5%;
+    font-size: var(--font-small);
+}
+
+#seolyu__header--loginForm input,
+#seolyu__header--loginForm input:focus,
+#seolyu__header--loginForm input:active {
+    font-family: 'SeoulHangangM';
+    font-size: var(--font-regular);
+    color: var(--color-white);
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid var(--color-white);
+    cursor: pointer;
+    caret-color: var(--color-white);
+}
+
+#seolyu__header--loginForm input::placeholder {
+    color: var(--color-white);
+}
+
+#seolyu__header--time {
+    width: 30%;
+    padding: 1%;
+    font-size: var(--font-regular);
+    color: var(--color-white);
+}
+
+.seolyu__content {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 98%;
+    height: 75%;
+    bottom: 0;
+    padding: 1% 0 2% 0;
+}
+
+.seolyu__content--wall {
+    display: flex;
+    justify-content: center;
+    width: 21.6%;
+    height: 100%;
+    background-color: var(--color-light-pink);
+    border-radius: 20px;
+    margin-right: 0.5%;
+    padding-top: 3%;
+}
+
+.seolyu__content--wall--photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    background-color: var(--color-dark-red);
+    border-radius: 20px;
+    padding-top: 4%;
+}
+
+.seolyu__content--wall--photo--deco {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    background-image: url('../imgs/album/deco.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 130px;
+    height: 120px;
+}
+
+#seolyu__content--wall--photo--image img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15%;
+}
+
+#seolyu__content--wall-photo--author {
+    color: var(--color-white);
+    font-weight: 200;
+    text-align: center;
+    font-size: var(--font-small);
+}
+
+.seolyu__content--todo {
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    width: 78.4%;
+    height: 100%;
+    background-color: var(--color-light-pink);
+    border-radius: 20px;
+    padding: 2% 4%;
+}
+
+.seolyu__content--todo--title {
+    font-size: var(--font-regular);
+    margin-bottom: 2%;
+}
+
+#seolyu__content--todo--todoForm input {
+    width: 80%;
+}
+
+#seolyu__content--todo--todoForm input,
+#seolyu__content--todo--todoForm input:focus,
+#seolyu__content--todo--todoForm input:active {
+    font-family: 'SeoulHangangM';
+    font-size: var(--font-regular);
+    color: var(--color-white);
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid var(--color-white);
+    cursor: pointer;
+    caret-color: var(--color-white);
+}
+
+#seolyu__content--todo--todoForm input::placeholder {
+    color: var(--color-white);
+}
+
+#seolyu__content--todo--todoList {
+    overflow: auto;
+    padding-left: 0;
+}
+
+#seolyu__content--todo--todoList::-webkit-scrollbar {
+    width: 10px;
+}
+
+#seolyu__content--todo--todoList::-webkit-scrollbar-thumb {
+    background-color: #F65CAF;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+#seolyu__content--todo--todoList::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.33);
+    border-radius: 10px;
+}
+
+#seolyu__content--todo--todoList li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: var(--font-regular);
+    background-color: var(--color-light-pink);
+    margin-bottom: 1%;
+    border-radius: 50px;
+    padding: 1% 4% 1% 4%;
+    margin-right: 10px;
+}
+
+#seolyu__content--todo--todoList li button {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: large;
+}
+
+#seolyu__weather {
+    position: fixed;
+    top: 4%;
+    right: 6%;
+    font-size: medium;
+    color: var(--color-white);
+}
